@@ -1,0 +1,15 @@
+/*Create Historian table named ER_297_GENERATOR*/
+CREATE TABLE `ER_297_GENERATOR` (
+  `ASSET_VALUE` decimal(10,7) DEFAULT NULL,
+  `PROPERTY_ALIAS` varchar(100) DEFAULT NULL,
+  `DATA_QUALITY` enum('GOOD','BAD','UNCERTAIN') DEFAULT NULL,
+  `ID` char(36) NOT NULL,
+  `DATE_TIME` datetime DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+);
+
+/*Create Update table for Historian table named ER_297_GENERATOR_UPDATE*/
+CREATE TABLE `ER_297_GENERATOR_UPDATE` (
+  `ID` char(36) DEFAULT NULL,
+  `LAST_UPDATE_DATE_TIME` datetime DEFAULT NULL
+);

@@ -1,0 +1,39 @@
+{
+    "RecipeFormatVersion": "2020-01-25",
+    "ComponentName": "aws.workshop.HistorianStreamIngestorIntoSiteWise",
+    "ComponentVersion": "1.0.0",
+    "ComponentType": "aws.greengrass.generic",
+    "ComponentDescription": "Read messages from a Historian and commit into sitewise.",
+    "ComponentPublisher": "Amazon",
+    "ComponentConfiguration": {
+        "DefaultConfiguration": {
+            "StreamName": "SiteWise_Edge_Stream"
+        }
+    },
+    "ComponentDependencies": {
+        "aws.workshop.PythonStreamManagerSDK": {
+            "VersionRequirement": ">=1.0.0 <2.0.0",
+            "DependencyType": "HARD"
+        }
+    },
+    "Manifests": [
+        {
+            "Platform": {
+                "os": "linux"
+            },
+            "Lifecycle": {
+                "Run": "export PYTHONPATH=$PYTHONPATH:{aws.workshop.PythonStreamManagerSDK:artifacts:decompressedPath}/stream_manager_python_sdk; python3 {artifacts:path}/historian_data_streamer_sitewise.py '{configuration:/StreamName}'"
+            },
+            "Artifacts": [
+                {
+                    "Uri": "s3://<Bucket name>/greengrass/components/aws.workshop.HistorianStreamIngestorIntoSiteWise/1.0.0/historian_data_streamer_sitewise.py",
+                    "Permission": {
+                        "Read": "OWNER",
+                        "Execute": "NONE"
+                    }
+                }
+            ]
+        }
+    ],
+    "Lifecycle": {}
+}
