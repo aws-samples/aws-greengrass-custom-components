@@ -18,9 +18,9 @@ Following are the pre-requisite before deploying the solution components:
 - Run the python code to populate Historian database. The code will run indefinitely, deletng (archiving) data older than 8 hours.
 - Initialize database related parameters through the configuration file:
   `db_host_name = "<Enter Host name or IP addres of the Historian DB>"
-  `db_user = "<User ID of the Historian DB>"
-  `db_password = "<Password of the Historian DB>"
-  `db_name = "<Database name>"`
+  db_user = "<User ID of the Historian DB>"
+  db_password = "<Password of the Historian DB>"
+  db_name = "<Database name>"`
 - Configure the Stream manager SDK for Python to create client object:  
 `client = StreamManagerClient()`
 - Configure Export definition with target to AWS IOT Sitewise
