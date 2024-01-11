@@ -1,6 +1,6 @@
 # Greengrass Custom Component for Historian data ingestion into AWS IOT Sitewise
 This project is all about creating GreenGrass custom component that can be deployed in the Plant IT network, reads data from Historian DB deployed in the plant and stream the data into [AWS IOT Sitewise](https://aws.amazon.com/iot-sitewise/). This component is very much relevant in scenarios where customer is primarily sending machine data to Historian DB  and want to monitor the process data in a dashboard (AWS IOT Sitewise or Grafana or custom built) in accordance with the machine tag hierarchy.  
-This github project provides detail on scripts to create Historian DB as well as populate data, IOT Sitewise configuration detail and Greengrass custom component to send Historian data to [AWS IOT Sitewise](https://aws.amazon.com/iot-sitewise/).
+This github project provides detail on scripts to create Historian DB as well as populate data, IOT Sitewise configuration and Greengrass custom component to send Historian data to [AWS IOT Sitewise](https://aws.amazon.com/iot-sitewise/).
 # About the component and over-all solution
 The below diagram showcase the over-all solution that can be deployed with this sample:
 ![Screenshot](ArchitectureDiagram_v01.png)
