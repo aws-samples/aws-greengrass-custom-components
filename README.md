@@ -15,8 +15,9 @@ Following are the pre-requisite before deploying the solution components:
 - Follow the instructions in sections 1, 2, 3 and 4 of the [IOT Greengrass workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/5ecc2416-f956-4273-b729-d0d30556013f/en-US/chapter4-createfirstcomp/20-step2) to set-up Greengrass Gateway and Asset model.
 # Solution instructions
 - Create Historian tables as per the SQL scripts included in **CreateTableScript.sql** file
-- Run the python code to populate Historian database. The code will run indefinitely, deletng (archiving) data older than 8 hours. Initialize database related parameters through the configuration file.
-    db_host_name = "<Enter Host name or IP addres of the Historian DB>"
+- Run the python code to populate Historian database. The code will run indefinitely, deletng (archiving) data older than 8 hours.
+- Initialize database related parameters through the configuration file.
+    `db_host_name = "<Enter Host name or IP addres of the Historian DB>"
     db_user = "<User ID of the Historian DB>"
     db_password = "<Password of the Historian DB>"
     db_name = "<Database name>"`
