@@ -16,7 +16,7 @@ Following are the pre-requisite before deploying the solution components:
 # Solution instructions
 - Create Historian tables as per the SQL scripts included in **CreateTableScript.sql** file
 - Run the python code to populate Historian database. The code will run indefinitely, deletng (archiving) data older than 8 hours.
-    `# Initialize database related parameters through a configuration file.
+    `Initialize database related parameters through a configuration file.
     db_host_name = "<Enter Host name or IP addres of the Historian DB>"
     db_user = "<User ID of the Historian DB>"
     db_password = "<Password of the Historian DB>"
