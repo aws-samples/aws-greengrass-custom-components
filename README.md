@@ -5,8 +5,8 @@ This github project provides detail on scripts to create Historian DB as well as
 The below diagram showcase the over-all solution that can be deployed with this sample:
 ![Screenshot](ArchitectureDiagram_v01.png)
 - Greengrass custom component is deployed at at the edge server inside [AWS IOT Greengrass](https://aws.amazon.com/greengrass/) server
-- Greengrass custom component read data from Historian database at a regular interval. Interval will be configured in the code.
-- One data is read from Historian database, they are sent to the edge sitewise stream. The stream name is configured in the code. The asset hierarchy along with other asset paramter name and values are read from the Historian database.
+- Greengrass custom component read data from Historian database at a regular interval. Time interval is configurable.
+- Once data is read from Historian database, they are sent to the edge sitewise stream. The stream name is configurable. The asset hierarchy along with other asset paramter name and values are read from the Historian database.
 - [AWS Greengrass Stream Manager SDK](https://github.com/aws-greengrass/aws-greengrass-stream-manager-sdk-python) is being used to send the historian data to edge sitewise stream.
 - From Sitewise edge stream, data is sent to [AWS IOT Sitewise](https://aws.amazon.com/iot-sitewise/) within specific measurement / asset hierarchy, as configured while sending the data to edge stream.
 # Pre-requisite for the solution set-up
